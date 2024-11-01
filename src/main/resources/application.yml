@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    active: local
+  banner:
+    location: classpath:/brasilprev_banner.txt
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: none
+        default_schema: risco_pos_venda
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    schemas: risco_pos_venda
+  main:
+    allow-bean-definition-overriding: true
+springdoc:
+  api-docs:
+    enabled: true
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: ALWAYS
+  endpoints:
+    web:
+      base-path: /
+      path-mapping:
+        health: health
+
+server:
+  servlet:
+    context-path: /risco-pos-venda-service-bb
+  port: 8080
+
+risco-pos-venda-bb:
+  openapi:
+    dev-url: http://localhost:8080/risco-pos-venda-service-bb
+    prod-url: https://risco-pos-venda-bb-api.com
+
+base-url-ecs: https://ecs.api.brasilprev.com.br

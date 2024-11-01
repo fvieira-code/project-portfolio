@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/risco_pos_venda_bb_dev
+  jpa:
+    show-sql: false
+  flyway:
+    enabled: false
+
+risco-pos-venda-bb:
+  openapi:
+    dev-url: http://localhost:8080/risco-pos-venda-service-bb
+    prod-url: https://risco-pos-venda-bb-api.com
+
+external:
+  generalBaseUrl: https://ecs.api-hml.brasilprev.com.br

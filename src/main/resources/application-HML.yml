@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://risco-pos-venda-bb-hml.cvk5asnnedpe.sa-east-1.rds.amazonaws.com:5432/risco_pos_venda_bb_hml
+    username: digitalrdsbp
+
+external:
+  generalBaseUrl: https://ecs-hml.hml-private-legacy.brasilprev.com.br
